@@ -11,9 +11,9 @@
 
 // TODO: squareElements 함수를 작성하세요.
 function squareElements(a) {
-    return a.map((num) => {
-        return num ** 2;
-    });
+    return a.map((num) => 
+         num ** 2
+    );
 }
 
 // export를 수정하지 마세요.
