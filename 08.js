@@ -15,7 +15,20 @@
 
 // TODO: chunkArray 함수를 작성하세요.
 function chunkArray(arr, size) {
-  // TODO
+  let result = [];
+  
+  for (let i=0; i<arr.length; i+=size) {
+    let temp = [];
+    
+    for(let j=i; j<i+size; j++) {
+      if (j < arr.length)
+      {temp.push(arr[j])}
+      else break;
+    }
+
+    result.push(temp);
+  }
+  return result;
 }
 
 // export를 수정하지 마세요.
