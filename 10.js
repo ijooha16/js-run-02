@@ -30,15 +30,18 @@
 // TODO: groupBy 함수를 작성하세요.
 
 function groupBy(arr, key) {
-  let result = {A:[], B:[]};
+  let result = {};
 
   for (let i=0; i<arr.length; i++) {
-    if (arr[i].group === 'A') {
-      result.A.push(arr[i])
+    let groupV = arr[i][key];
+
+    if (result[groupV]) {
+      result[groupV].push(arr[i]); 
     } else {
-      result.B.push(arr[i]);
+      result[groupV] = [arr[i]]; 
     }
   }
+
   return result;
 }
 
