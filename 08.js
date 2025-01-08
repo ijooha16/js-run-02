@@ -14,20 +14,31 @@
  */
 
 // TODO: chunkArray 함수를 작성하세요.
-function chunkArray(arr, size) {
-  let result = [];
+// function chunkArray(arr, size) {
+//   let result = [];
   
-  for (let i=0; i<arr.length; i+=size) {
-    let temp = [];
+//   for (let i=0; i<arr.length; i+=size) {
+//     let temp = [];
     
-    for(let j=i; j<i+size; j++) {
-      if (j < arr.length)
-      {temp.push(arr[j])}
-      else break;
-    }
+//     for(let j=i; j<i+size; j++) {
+//       if (j < arr.length)
+//       {temp.push(arr[j])}
+//       else break;
+//     }
 
-    result.push(temp);
+//     result.push(temp);
+//   }
+//   return result;
+// }
+
+function chunkArray(arr, size){
+
+  let result = [];
+
+  for (let i=0; i<arr.length; i+=size) {
+    result.push(arr.slice(i,i+size))
   }
+
   return result;
 }
 

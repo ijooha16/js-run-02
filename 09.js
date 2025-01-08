@@ -12,7 +12,7 @@
 
 // TODO: calculateStatistics 함수를 작성하세요.
 function calculateStatistics(users) {
-  let result = { averageAge: 0, maxAge: 0 }
+  let result = {};
   let age = [];
 
   for (let i=0; i<users.length; i++) {
@@ -31,7 +31,7 @@ function calculateStatistics(users) {
 
   result.averageAge = average;
   result.maxAge = max;
-  
+
   return result;
 }
 
